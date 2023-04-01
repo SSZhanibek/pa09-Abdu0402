@@ -1,7 +1,7 @@
 # Enter your information here
 ```
-Full name: ___ ___
-Student ID: ___ ___
+Full name:Kurbanbayev Abdusodik
+Student ID:220103191
 ```
 
 # Practice activity 9
