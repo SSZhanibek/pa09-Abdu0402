@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class GenericMethod {
+    public GenericMethod() {
+    }
+
+    public static void main(String[] var0) {
+        ArrayList var1 = new ArrayList();
+        var1.add(1);
+        var1.add(1.2);
+        var1.add(3.14F);
+        byte var2 = 1;
+        var1.add(var2);
+        byte var3 = 122;
+        var1.add(Short.valueOf(var3));
+        add(var1);
+        Integer[] var4 = new Integer[]{1, 2, 3, 4, 5};
+        Double[] var5 = new Double[]{1.1, 2.2, 3.3};
+        System.out.println(add((Number[])var4));
+        System.out.println(add((Number[])var5));
+    }
+
+    public static void add(ArrayList<Number> var0) {
+        double var1 = 0.0;
+
+        Number var4;
+        for(Iterator var3 = var0.iterator(); var3.hasNext(); var1 += var4.doubleValue()) {
+            var4 = (Number)var3.next();
+        }
+
+        System.out.println(var1);
+    }
+
+    public static <T extends Number> double add(T[] var0) {
+        double var1 = 0.0;
+
+        for(int var3 = 0; var3 < var0.length; ++var3) {
+            var1 += var0[var3].doubleValue();
+        }
+
+        return var1;
+    }
+}
